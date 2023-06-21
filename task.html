@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="task.css">
+  </head>
+
+  <body>
+		<div class="container">
+			<h1>Simple Calculator</h1>
+
+			<!-- Getting the numbers from the user-->
+			<p>Enter First Number:</p>
+
+			<input type="text" id="first" />
+
+			<p>Enter Second Number:</p>
+
+			<input type="text" id="second" />
+    
+      <div class="result" id="result"></div>
+      <div class="button">
+        <button class="add" id="add">Addition</button>
+        <button class="subtract" id="subtract">Subtraction</button>
+        <button class="multiply" id="multiply">Multiplication</button>
+        <button class="divide" id="divide">Division</button>
+      </div>
+      <button class="reset" id="reset">Reset</button>
+		</div>
+    
+  </body>
+
+
+
+  <script>
+    window.onload = () => {
+    let add = document.querySelector('#add');
+    let subtract = document.querySelector('#subtract');
+    let multiply = document.querySelector('#multiply');
+    let divide = document.querySelector('#divide');
+    let reset = document.querySelector('#reset');
+    let result = document.querySelector("#result");
+
+
+    // Function for the operations
+      add.addEventListener("click", addition);
+      subtract.addEventListener("click", subtraction);
+      multiply.addEventListener("click", multiplication);
+      divide.addEventListener("click", division);
+      reset.addEventListener("click", reseting);
+    };
+
+
+
+    //Function for Addition
+
+      function addition() {
+        let num1 = parseInt(document.getElementById('first').value);
+        let num2 = parseInt(document.getElementById('second').value);
+          
+          // Checking the user providing a proper
+      // value or not
+      if ((num1 === "" || isNaN(num1)) && (num2 === "" || isNaN(num2)))
+
+        result.innerHTML = "Warning!!! Provide a valid First and Second Number";
+
+      else if (num2 === "" || isNaN(num2))
+
+        result.innerHTML = "Warning!!! Provide a valid Second Number";
+
+      else if (num1 === "" || isNaN(num1))
+
+        result.innerHTML = "Warning!!! Provide a valid Frist Number";
+
+      // If both input is valid, calculate the addition
+      else {
+
+        let addition = num1 + num2 ;
+        result.innerHTML= 'The result of adding '+ num1 + ' and ' + num2 + ' is ' + addition;
+
+        }
+      } 
+
+
+
+      //Function for Subtraction
+
+      function subtraction() {
+        let num1 = parseInt(document.getElementById('first').value);
+        let num2 = parseInt(document.getElementById('second').value);
+
+          // Checking the user providing a proper
+      // value or not
+      if ((num1 === "" || isNaN(num1)) && (num2 === "" || isNaN(num2)))
+
+        result.innerHTML = "Warning!!! Provide a valid First and Second Number";
+
+      else if (num2 === "" || isNaN(num2))
+
+        result.innerHTML = "Warning!!! Provide a valid Second Number";
+
+      else if (num1 === "" || isNaN(num1))
+
+        result.innerHTML = "Warning!!! Provide a valid Frist Number";
+
+      // If both input is valid, calculate the Subtraction
+      else {
+
+        let subtraction = num1 - num2 ;
+        result.innerHTML= 'The result of subtracting '+ num2 + ' from ' + num1 + ' is ' + subtraction;
+
+        }
+      }
+
+
+
+      //Function for Multiplication
+
+      function multiplication() {
+        let num1 = parseInt(document.getElementById('first').value);
+        let num2 = parseInt(document.getElementById('second').value);
+
+          // Checking the user providing a proper
+      // value or not
+      if ((num1 === "" || isNaN(num1)) && (num2 === "" || isNaN(num2)))
+
+        result.innerHTML = "Warning!!! Provide a valid First and Second Number";
+
+      else if (num2 === "" || isNaN(num2))
+
+        result.innerHTML = "Warning!!! Provide a valid Second Number";
+
+      else if (num1 === "" || isNaN(num1))
+
+        result.innerHTML = "Warning!!! Provide a valid Frist Number";
+
+      // If both input is valid, calculate the Multiplication
+      else {
+
+        let multiplication = num1 * num2 ;
+        result.innerHTML= 'The result of Multiplying '+ num1 + ' and ' + num2 + ' is ' + multiplication;
+
+        }
+      }
+
+
+
+        //Function for Division
+
+      function division() {
+        let num1 = parseInt(document.getElementById('first').value);
+        let num2 = parseInt(document.getElementById('second').value);
+
+          // Checking the user providing a proper
+      // value or not
+      if ((num1 === "" || isNaN(num1)) && (num2 === "" || isNaN(num2)))
+
+        result.innerHTML = "Warning!!! Provide a valid First and Second Number";
+
+      else if (num2 === "" || isNaN(num2))
+
+        result.innerHTML = "Warning!!! Provide a valid Second Number";
+
+      else if (num1 === "" || isNaN(num1))
+
+        result.innerHTML = "Warning!!! Provide a valid Frist Number";
+
+      // If both input is valid, calculate the Division
+      else {
+
+        let division = num1/num2 ;
+        result.innerHTML= 'The result of dividing '+ num1 + ' by ' + num2 + ' is ' + division;
+
+        }
+      }
+
+      //Reset Function
+      function reseting() {
+        result.innerHTML = "";
+      }
+  
+  </script>
+</html>
