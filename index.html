@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Calculator</title>
     <link rel="stylesheet" href="task.css">
   </head>
 
@@ -10,14 +9,16 @@
 			<h1>Simple Calculator</h1>
 
 			<!-- Getting the numbers from the user-->
-			<p>Enter First Number:</p>
+      <form id="form">
+        <p>Enter First Number:</p>
 
-			<input type="text" id="first" />
+        <input type="text" id="first" />
 
-			<p>Enter Second Number:</p>
+        <p>Enter Second Number:</p>
 
-			<input type="text" id="second" />
-    
+        <input type="text" id="second" />
+      
+      </form>
       <div class="result" id="result"></div>
       <div class="button">
         <button class="add" id="add">Addition</button>
@@ -25,7 +26,7 @@
         <button class="multiply" id="multiply">Multiplication</button>
         <button class="divide" id="divide">Division</button>
       </div>
-      <button class="reset" id="reset">Reset</button>
+      <input type="button" value="Reset" class="reset" id="reset" onclick="clearInput()">
 		</div>
     
   </body>
@@ -51,6 +52,9 @@
     };
 
 
+    function clearInput() {
+      document.getElementById('form').reset();
+    }
 
     //Function for Addition
 
