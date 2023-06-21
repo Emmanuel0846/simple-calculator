@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  height: 450px;
+  height: 430px;
   width: 400px;
   display: flex;
   flex-direction: column;
